@@ -2,8 +2,7 @@
 
 name = "inspect"
 version = "0.1.2"
-authors = ["reem"]
+authors = ["reem", "Nathan Lilienthal <nathan@nixpulvis.com>"]
 description = "Advanced logging for dumping expressions during debugging."
 repository = "https://github.com/reem/rust-inspect"
 license = "MIT"
-
