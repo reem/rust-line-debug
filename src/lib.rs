@@ -5,7 +5,8 @@
 
 use std::fmt::Debug;
 
-/// Logs the file, line number, and expressions along with their `Show` value.
+/// Logs the file, line number, and expressions along with their `inspect` value.
+/// All arguments of this macro must have trait `Inspect`.
 ///
 /// # Examples
 ///
@@ -14,7 +15,8 @@ use std::fmt::Debug;
 /// # extern crate inspect;
 /// fn main() {
 ///     let a = 7;
-///     inspect!(a, a + 4); //=> file.rs - X: a = 7, a + 4 = 11
+///     inspect!(a, a + 4);
+///     //=> <file>.rs - 9: a = [i32] 7, a + 4 = [i32] 11,
 /// }
 /// ```
 ///
@@ -58,6 +60,8 @@ pub trait Inspect {
     fn inspect(&self) -> String;
 }
 
+
+/// asd
 impl<T: Debug> Inspect for T {
     fn inspect(&self) -> String {
         let type_name = unsafe { std::intrinsics::type_name::<T>() };
