@@ -10,7 +10,7 @@
 /// # #[macro_use(inspect)]
 /// # extern crate inspect;
 /// fn main() {
-///     let a = 7u;
+///     let a = 7;
 ///     inspect!(a, a + 4); //=> file.rs - X: a = 7, a + 4 = 11
 /// }
 /// ```
