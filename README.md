@@ -18,6 +18,8 @@ fn main() {
     let b = 4u64;
     inspect!(a, b, a as u64 + b);
     //=> examples/readme.rs - 7: a = [u32] 7, b = [u64] 4, a as u64 + b = [u64] 11,
+    inspect::p(false);
+    //=> [bool] false
 }
 ```
 
